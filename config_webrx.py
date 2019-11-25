@@ -35,27 +35,26 @@ config_webrx: configuration options for OpenWebRX
 #       https://github.com/simonyiszk/openwebrx/wiki
 
 # ==== Server settings ====
-web_port=8073
+web_port=8001
 server_hostname="localhost" # If this contains an incorrect value, the web UI may freeze on load (it can't open websocket)
-max_clients=20
+max_clients=10
 
 # ==== Web GUI configuration ====
-receiver_name="[Callsign]"
-receiver_location="Budapest, Hungary"
-receiver_qra="JN97ML"
-receiver_asl=200
-receiver_ant="Longwire"
+receiver_name="EB7DZP"
+receiver_location="Granada, Spain"
+receiver_qra="IM87EE"
+receiver_asl=680
+receiver_ant="X3000"
 receiver_device="RTL-SDR"
-receiver_admin="example@example.com"
-receiver_gps=(47.000000,19.000000)
+receiver_admin="granasat@ugr.es"
+receiver_gps=(37.144119,-3.607147)
 photo_height=350
-photo_title="Panorama of Budapest from Schönherz Zoltán Dormitory"
+photo_title=""
 photo_desc="""
-You can add your own background photo and receiver information.<br />
 Receiver is operated by: <a href="mailto:%[RX_ADMIN]">%[RX_ADMIN]</a><br/>
 Device: %[RX_DEVICE]<br />
 Antenna: %[RX_ANT]<br />
-Website: <a href="http://localhost" target="_blank">http://localhost</a>
+Website: <a href="http://granasat.ugr.es" target="_blank">http://granasat.ugr.es</a>
 """
 
 # ==== sdr.hu listing ====
@@ -73,8 +72,8 @@ fft_voverlap_factor=0.3 #If fft_voverlap_factor is above 0, multiple FFTs will b
 
 # samp_rate = 250000
 samp_rate = 2400000
-center_freq = 144250000
-rf_gain = 5 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
+center_freq = 145500000
+rf_gain = 37 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
 ppm = 0
 
 audio_compression="adpcm" #valid values: "adpcm", "none"
